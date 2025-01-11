@@ -1,0 +1,128 @@
+# Site
+name: 'Efe Hazretleri Vakfı'
+title: 'Efe Hazretleri Vakfı Resmi Web Sitesi'
+description: 'Alvarlı Efe Hazretleri Vakfı Resmi Web Sitesi'
+logo: 'assets/images/logo.png'
+bwlogo: 'assets/images/logo-bw.png'
+favicon: 'assets/images/favicon/favicon.ico'
+baseurl: ''
+url: 'https://efehazretleri.org.tr'
+lang: "tr"
+email: 'iletisim@efehazretleri.org.tr'
+
+
+# Google Analytics and Adsence Settings
+google_analytics: 'G-KFMVQ3WNN3'
+# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
+adsense: "disabled"
+adsense-data-ad-client: "ca-pub-3412143450191416"
+adsense-data-ad-slot: "1363087678"
+
+# Social Media  
+twitter: 'https://twitter.com/efehazretleri'
+facebook: 'https://www.facebook.com/efehazretleri'
+instagram: 'https://instagram.com/efehazretleri'
+youtube: 'https://www.youtube.com/c/efehazretleri'
+
+
+# Plugins
+plugins: 
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-figure
+  - jekyll-gist
+ 
+# Defaults
+defaults:
+
+  # all posts
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      avatar: /assets/images/avatar.jpg
+      
+  # all pages
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
+
+  # all products
+  - scope:
+      type: "products"
+      path: "_products"
+    values:
+      layout: product
+
+  # all slides
+  - scope:
+      type: "slides"
+      path: "_slides"
+    values:
+      layout: slide
+
+      
+# Syntax
+markdown: kramdown
+highlighter: rouge
+
+# XML feed
+feed:
+  collections:
+    products:
+      path: "/urunler/feed.xml"
+
+# excerpt
+excerpt_separator: <!--more-->
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "enabled"
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+collections:
+  products:
+    output: true
+    permalink: /urunler/:title
+    
+  slides: 
+    output: false
+    sort_by: order
+
+# Exclude metadata and development time dependencies (like Grunt plugins)
+exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+
+
+# Custom Configurations
+
+pagepreview:
+  enabled: false
+  prefix: 'https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/'
+  postfix: '/index.html'
+
+include: ["_pages"]
+permalink: /:title/
+
+
+# BuyOut Ecommerce
+buyout:
+  enabled: false
+  #buyout websites:
+  damlayayinevi: true
+  hepsiburada: true
+  dnr: true
+  idefix: true
+  kitapyurdu: true
+  odatvkitap: false
+  bkmkitap: true
+  amazontr: true
+  dkitap: true
+  trendyol: true
+  gittigidiyor: true

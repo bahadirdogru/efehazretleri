@@ -1,0 +1,229 @@
+<!-- Superfish Menu Requirements -->
+<link rel="stylesheet" href="{{site.baseurl}}/assets/superfish-master/dist/css/superfish.css">
+<link rel="stylesheet" href="{{site.baseurl}}/assets/css/td-icons.css">
+<script src="{{site.baseurl}}/assets/jquery-3.6.0.min.js"></script>
+<script src="{{site.baseurl}}/assets/superfish-master/dist/js/superfish.min.js"></script>
+
+<style>
+    /* Ana menü stilleri */
+    .sf-menu {
+        background-color: #fff;
+        border: none;
+    }
+    
+    .sf-menu li {
+        background: #fff;
+        border: none;
+    }
+    
+    /* Ana menü linkleri */
+    .sf-menu > li > a {
+        padding: 16px;
+        color: #111;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 48px;
+    }
+    
+    /* Tüm alt menü stilleri (1. ve 2. seviye için) */
+    .sf-menu ul,
+    .sf-menu ul ul {
+        background: #fff;
+        border: 1px solid #eee;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    
+    .sf-menu ul li,
+    .sf-menu ul ul li {
+        background: #fff;
+        border-bottom: 1px solid #f5f5f5;
+    }
+    
+    .sf-menu ul li:last-child,
+    .sf-menu ul ul li:last-child {
+        border-bottom: none;
+    }
+    
+    /* Tüm alt menü linkleri (1. ve 2. seviye için) */
+    .sf-menu ul li a,
+    .sf-menu ul ul li a {
+        padding: 10px 15px;
+        color: #111;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    
+    /* Hover efektleri - tüm seviyeler için */
+    .sf-menu li:hover,
+    .sf-menu li.sfHover,
+    .sf-menu ul li:hover,
+    .sf-menu ul li.sfHover,
+    .sf-menu ul ul li:hover,
+    .sf-menu ul ul li.sfHover {
+        background: #f8f8f8;
+    }
+    
+    .sf-menu li:hover > a,
+    .sf-menu li.sfHover > a,
+    .sf-menu ul li:hover > a,
+    .sf-menu ul li.sfHover > a,
+    .sf-menu ul ul li:hover > a,
+    .sf-menu ul ul li.sfHover > a {
+        color: #4db2ec;
+    }
+    
+    /* Ok ikonları */
+    .td-icon-menu-down {
+        margin-left: 5px;
+        font-size: 9px;
+    }
+    
+    /* Aktif menü öğesi - tüm seviyeler için */
+    .sf-menu > .current-menu-item > a,
+    .sf-menu > .current-menu-ancestor > a,
+    .sf-menu ul .current-menu-item > a,
+    .sf-menu ul .current-menu-ancestor > a,
+    .sf-menu ul ul .current-menu-item > a,
+    .sf-menu ul ul .current-menu-ancestor > a {
+        color: #4db2ec;
+    }
+</style>
+
+<script>
+    jQuery(document).ready(function() {
+        jQuery('ul.sf-menu').superfish({
+            delay: 100,
+            animation: {opacity:'show'},
+            speed: 'fast'
+        });
+    });
+</script>
+
+<div class="menu-container">
+<ul class="sf-menu">
+
+    <li class="menu-item menu-item-has-children">
+        <a href="#" class="sf-with-ul">Efe Hazretleri<i class="td-icon-menu-down"></i></a>
+        <ul class="sub-menu">
+            <li class="menu-item menu-item-has-children">
+                <a href="#" class="sf-with-ul">Efe Hazretleri<i class="td-icon-menu-down"></i></a>
+                <ul class="sub-menu">
+                    <li class="menu-item"><a href="{{site.baseurl}}/efe-hazretleri-kimdir/">Kimdir ?</a></li>
+                    <li class="menu-item"><a href="{{site.baseurl}}/tarihce-i-hayat/">Tarihçe-i Hayat</a></li>
+                    <li class="menu-item"><a href="{{site.baseurl}}/efe-hazretlerinin-sahsiyeti/">Şahsiyeti</a></li>
+                    <li class="menu-item"><a href="{{site.baseurl}}/efe-hazretlerinin-edebi-yonu/">Edebi Yönü</a></li>
+                    <li class="menu-item"><a href="{{site.baseurl}}/efe-hazretlerinin-tasavvufi-yonu/">Tasavvufi Yönü</a></li>
+                    <li class="menu-item"><a href="{{site.baseurl}}/efe-hazretlerinin-hilafet-icazeti/">Hilâfet İcâzeti</a></li>
+                    <li class="menu-item"><a href="{{site.baseurl}}/efe-hazretinin-menakibinden/">Menâkıbinden</a></li>
+                    <li class="menu-item"><a href="{{site.baseurl}}/efe-hazretlerinin-milli-mucadelesi/">Milli Mücadelesi</a></li>
+                    <li class="menu-item"><a href="{{site.baseurl}}/efe-hazretlerinin-eserleri-2/">Eserleri ve Ardında Bıraktıkları</a></li>
+                </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+                <a href="#" class="sf-with-ul">Ailesi<i class="td-icon-menu-down"></i></a>
+                <ul class="sub-menu">
+                    <li class="menu-item"><a href="{{site.baseurl}}/hace-huseyin-efendi/">Hâce Hüseyin Efendi</a></li>
+                    <li class="menu-item"><a href="{{site.baseurl}}/hace-mahmud-vehbi/">Hâce Mahmud Vehbî Efendi</a></li>
+                    <li class="menu-item"><a href="{{site.baseurl}}/hace-seyfeddin-efendi/">Hâce Seyfeddin Efendi Hazretleri</a></li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href="{{site.baseurl}}/altin-silsilesi/">Altın Silsile</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/guzel-sanatlara-yansiyanlar/">Güzel Sanatlara Yansıyanlar</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/besteler/">Mûsikîye Yansıyanlar</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/soy-agaci/">Soy Ağacı (Şeceresi)</a></li>
+        </ul>
+    </li>
+
+    <li class="menu-item menu-item-has-children">
+        <a href="#" class="sf-with-ul">Kurumsal<i class="td-icon-menu-down"></i></a>
+        <ul class="sub-menu">
+            <li class="menu-item"><a href="{{site.baseurl}}/efe-hazretleri-vakfi/">Efe Hazretleri Vakfı</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/vakif-kurucu-heyeti/">Vakıf Kurucu Heyeti</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/vakif-mutevelli-heyeti/">Vakıf Mütevelli Heyeti</a></li>
+            <li class="menu-item menu-item-has-children">
+                <a href="#" class="sf-with-ul">Hakkımızda<i class="td-icon-menu-down"></i></a>
+                <ul class="sub-menu">
+                    <li class="menu-item"><a href="{{site.baseurl}}/vakif-senedi/">Vakıf Senedi</a></li>
+                    <li class="menu-item"><a href="{{site.baseurl}}/hedeflerimiz/">Hedeflerimiz</a></li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href="{{site.baseurl}}/iletisim/">İletişim</a></li>
+            <li class="menu-item menu-item-has-children">
+                <a href="#" class="sf-with-ul">Vakfın Şubeleri<i class="td-icon-menu-down"></i></a>
+                <ul class="sub-menu">
+                    <li class="menu-item"><a href="{{site.baseurl}}/erzurum-subesi/">Erzurum Şubesi</a></li>
+                    <li class="menu-item"><a href="{{site.baseurl}}/konya-subesi/">Konya Şubesi</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <li class="menu-item menu-item-has-children">
+        <a href="#" class="sf-with-ul">Faaliyetler<i class="td-icon-menu-down"></i></a>
+        <ul class="sub-menu">
+            <li class="menu-item"><a href="{{site.baseurl}}/kuran-medeniyeti-sanat-bahcesi/">Kur'an Medeniyeti Sanat Bahçesi</a></li>
+            <li class="menu-item menu-item-has-children">
+                <a href="#" class="sf-with-ul">Kur'an Medeniyeti İstanbul Mushafı<i class="td-icon-menu-down"></i></a>
+                <ul class="sub-menu">
+                    <li class="menu-item"><a href="{{site.baseurl}}/cumhurbaskanimizin-istanbul-mushafi-sunumu/">Cumhurbaşkanımızın İstanbul Mushafı Sunumu</a></li>
+                    <li class="menu-item"><a href="{{site.baseurl}}/istanbul-mushafi-huseyin-kutlu-sunumu/">İstanbul Mushafı Hüseyin Kutlu Sunumu</a></li>
+                    <li class="menu-item"><a href="{{site.baseurl}}/istanbul-mushafi-sunum-metni/">İstanbul Mushafı Sunum Metni</a></li>
+                    <li class="menu-item"><a href="{{site.baseurl}}/huseyin-kutlu-hat-sanati/">Hüseyin Kutlu Hat Sanatı</a></li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href="{{site.baseurl}}/alvarlizade-hace-seyfeddin-efendi-camii/">Alvarlızade Hace Seyfeddin Efendi Camii</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/alvarli-efe-hazretleri-kulliyesi/">Alvarlı Efe Hazretleri Külliyesi</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/alipasa-turk-islam-sanatlari-kutuphanesi/">Alipaşa Türk İslam Sanatları Kütüphanesi</a></li>
+            <li class="menu-item menu-item-has-children">
+                <a href="#" class="sf-with-ul">Eğitim Faaliyetleri<i class="td-icon-menu-down"></i></a>
+                <ul class="sub-menu">
+                    <li class="menu-item"><a href="{{site.baseurl}}/alipasa-subesi/">Alipaşa Şubesi</a></li>
+                    <li class="menu-item"><a href="{{site.baseurl}}/kanlica-subesi/">Kanlıca Şubesi</a></li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="#" class="sf-with-ul">Grup Çalışmaları<i class="td-icon-menu-down"></i></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="{{site.baseurl}}/tezyini-sanatlar/">Tezyinî Sanatlar</a></li>
+                            <li class="menu-item"><a href="{{site.baseurl}}/musiki-sanatlar/">Musikî Sanatlar</a></li>
+                            <li class="menu-item"><a href="{{site.baseurl}}/diger-calismalar/">Diğer Çalışmalar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href="{{site.baseurl}}/uluslararasi-efe-hazretleri-sempozyumu/">Uluslararası Efe Hazretleri Sempozyumu</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/konya-subesi-faaliyetleri/">Konya Şubesi Faaliyetleri</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/erzurum-subesi-faaliyetleri/">Erzurum Şubesi Faaliyetleri</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/hayir-carsilari/">Hayır Çarşıları</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/sergiler/">Sergiler</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/konserler-2/">Konserler</a></li>
+        </ul>
+    </li>
+
+    <li class="menu-item menu-item-has-children">
+        <a href="#" class="sf-with-ul">Yayınlar<i class="td-icon-menu-down"></i></a>
+        <ul class="sub-menu">
+            <li class="menu-item"><a href="{{site.baseurl}}/basili-yayinlar/">Basılı Yayınlar</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/sesli-yayinlar/">Sesli Yayınlar</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/tezler/">Tezler</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/besteler/">Besteler</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/takvimlerimiz/">Takvimlerimiz</a></li>
+        </ul>
+    </li>
+
+    <li class="menu-item">
+        <a href="{{site.baseurl}}/burs/">Burs</a>
+    </li>
+
+    <li class="menu-item menu-item-has-children">
+        <a href="#" class="sf-with-ul">Medya<i class="td-icon-menu-down"></i></a>
+        <ul class="sub-menu">
+            <li class="menu-item"><a href="{{site.baseurl}}/gazete/">Gazete</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/dergi/">Dergi</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/televizyon/">Televizyon</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/internet/">İnternet</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/radyo/">Radyo</a></li>
+            <li class="menu-item"><a href="{{site.baseurl}}/sosyal-medya/">Sosyal Medya</a></li>
+        </ul>
+    </li>
+</ul>
+</div>
