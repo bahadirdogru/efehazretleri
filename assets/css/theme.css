@@ -2,11 +2,13 @@
 	color: #ffc107 !important;
   }
 
-body {
-	overflow-x:hidden;
-	padding-top:69.75px;
-	background-image: url(/assets/images/gencdamla2.png);
+  body {
+    overflow-x: hidden;
+    padding-top: 69.75px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/background.jpg);
+    background-repeat: repeat;
 }
+
 .site-content {
 	margin-top:50px;
 	min-height:400px;
