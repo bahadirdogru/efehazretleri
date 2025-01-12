@@ -9,6 +9,7 @@ baseurl: ''
 url: 'https://efehazretleri.org.tr'
 lang: "tr"
 email: 'iletisim@efehazretleri.org.tr'
+cdn: 'https://cdn.efehazretleri.org.tr/'
 
 
 # Google Analytics and Adsence Settings

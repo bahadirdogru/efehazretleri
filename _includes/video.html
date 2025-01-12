@@ -1,0 +1,126 @@
+<!-- Plyr CSS -->
+<link rel="stylesheet" href="/assets/css/plyr.css">
+
+<style>
+:root {
+    --plyr-color-main: #00b3ff;
+    --plyr-range-fill-background: var(--plyr-color-main);
+}
+
+.video-container {
+    max-width: 100%;
+    margin: 2rem auto;
+    background: #1b2b3b;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.plyr__video-embed, 
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+<!-- Video Container -->
+{%- if include.video -%}
+<div class="video-container">
+    <div class="plyr__video-embed" id="video-player">
+        {% if include.type == 'vimeo' %}
+        <iframe
+            src="https://player.vimeo.com/video/{{ include.video }}?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+            allowfullscreen
+            allowtransparency
+            allow="autoplay"
+        ></iframe>
+        {% elsif include.type == 'youtube' %}
+        <iframe
+            src="https://www.youtube.com/embed/{{ include.video }}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+            allowfullscreen
+            allowtransparency
+            allow="autoplay"
+        ></iframe>
+        {% elsif include.type == 'url' %}
+        <video id="video-player" playsinline>
+            <source src="{{ include.video }}" type="video/mp4" />
+        </video>
+        {% endif %}
+    </div>
+</div>
+{%- endif -%}
+
+<!-- Plyr JS -->
+<script src="/assets/js/plyr.js"></script>
+<script>
+// Plyr script'ini dinamik olarak yükle
+function loadPlyr() {
+    return new Promise((resolve, reject) => {
+        if (window.Plyr) {
+            resolve(window.Plyr);
+            return;
+        }
+
+        const script = document.createElement('script');
+        script.src = '{{ "/assets/js/plyr.js" | relative_url }}';
+        script.async = true;
+        script.onload = () => resolve(window.Plyr);
+        script.onerror = () => reject(new Error('Plyr yüklenemedi'));
+        document.body.appendChild(script);
+    });
+}
+
+// Player'ı başlat
+function initPlayer() {
+    loadPlyr()
+        .then(() => {
+            const player = new Plyr('#video-player', {
+                controls: [
+                    'play-large',
+                    'restart',
+                    'rewind',
+                    'play',
+                    'fast-forward',
+                    'progress',
+                    'current-time',
+                    'duration',
+                    'mute',
+                    'volume',
+                    'settings',
+                    'fullscreen'
+                ],
+                settings: ['quality', 'speed'],
+                quality: {
+                    default: 1080,
+                    options: [4320, 2880, 2160, 1440, 1080, 720, 576, 480, 360, 240]
+                },
+                speed: {
+                    selected: 1,
+                    options: [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]
+                },
+                hideControls: true
+            });
+            console.log('Plyr başarıyla başlatıldı');
+        })
+        .catch(error => {
+            console.error('Player başlatılamadı:', error);
+        });
+}
+
+// Sayfa yüklendiğinde başlat
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(initPlayer, 100); // Küçük bir gecikme ekledik
+});
+</script>
+
+<!-- 
+kullanımı için:
+include video.html type="vimeo" video="123456789"
+include video.html type="youtube" video="dQw4w9WgXcQ"
+include video.html type="url" video="/assets/videos/sample.mp4"
+-->
