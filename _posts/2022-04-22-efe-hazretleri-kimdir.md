@@ -10,13 +10,11 @@ featured: true
 # For adding excerpt add <!--more--> and break the line
 ---
 
-![Efe Hazretleri](assets/images/posts/efe-hazretleri-kimdir-kucuk.jpg)
-
 Hâce Muhammed Lutfî  
 ( Alvarlı Efe Hazretleri )
 
 1285 / 1868 – 1376 / 1956
-<!--more-->
+
 ***
   
 Muhammed Lutfî'dir Bâb-ı Tecellâ  
@@ -30,11 +28,11 @@ Allah dostları arasında, değeri yüksek; derecesi yücedir.
 Allâhu Teâlâ, Onun Yüce Sırrını takdîs etsin.
 
 ***
-
+<!--more-->
 Hâce Muhammed LUTFÎ (Alvarlı Efe Hazretleri) 1285 / 1868 tarihinde Erzurum'un Hasankale'ye bağlı Kındığı Köyü'nde dünyaya gelmiştir.
 
 Pederleri Hâce Hüseyin Efendi, vâlideleri Seyyide Hadîce Hanım'dır. Tahsilini başta pederi olmak üzere devrinin şöhretli âlimlerinden tamamlayarak mücâzen 1307 / . . . 'de Hasankale'nin Sivaslı Câmii'ne imam olmuştur.
-
+<!--more-->
 Aynı yıl pederleri ile birlikte Bitlis'e giderek Hâce Muhammed Pîr-i Küfrevî Hazretleri'nin huzuruyla müşerref olmuş 1312 / . . . tarihinde seçkin bir halifesi olarak Hasankale'ye dönmüşlerdir.
 
 Buradan Erzurum'un DİNARKOM Köyü'ne gitmiş ve orada 1. Cihan Harbi'ne kadar kalmıştır. Bilahare vazifesini Yavi Nahiyesi'ne, oradan da anavatanı olan Hasankale'ye nakletmiştir. Kendisine teklif edilen Hasankale Müftülüğünü kabul etmemiş, Alvar Köyü halkının istirhâmı üzerine oraya giderek bu köyde yirmi dört sene vazife yapmıştır.

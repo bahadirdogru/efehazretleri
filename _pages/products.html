@@ -1,0 +1,22 @@
+---
+title: "Eserler"
+layout: default
+permalink: "/eserler"
+---
+
+<div class="container">
+    {% assign grouped_products = site.products | group_by: "categories" %}
+    {% for category in grouped_products %}
+        <h4 id="{{ category.name | replace: '["', '' | replace: '"]', '' | replace: '[', '' | replace: ']', '' | downcase | replace: ' ', '-' }}" class="font-weight-bold spanborder mt-5"><span>{{ category.name | replace: '["', '' | replace: '"]', '' | replace: '[', '' | replace: ']', '' }}</span></h4>
+        <div class="row gap-y listrecent listrecent listauthor">
+            {% for product in category.items %}
+                <div class="col-12 col-sm-3 p-4 border rounded kitap-kutu">
+                    <a class="baslik-link" href="{{ product.url }}">            
+                        <img class="cover-images" src="{{site.baseurl}}/{{ product.image }}" alt="">
+                        <h4 class="text-dark mb-0"> {{ product.title }} </h4>
+                    </a>
+                </div>  
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>

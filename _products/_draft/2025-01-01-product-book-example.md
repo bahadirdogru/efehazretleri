@@ -1,20 +1,11 @@
 ---
-layout: product
-title:  "İcat Atölyesi"
-
-
-publisher: damlapublishing
-authors: "Komisyon"
-illustrators: [""]
-translators: #["naci-turan","burak-dogru"]
+layout: product-book
+title:  "Seyreyle Güzel Albümü"
 image: assets/images/ean/9786059656795.jpg
-categories: [ "Religion" ]
+categories: [ "Sesli Yayınlar" ]
 tags: [ "Literature"]
 previewpage: false
 featured: false
-
-genre: tumdersler
-type: sinif0
 
 # Book attributes
 ean: 9786059656795

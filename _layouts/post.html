@@ -15,20 +15,10 @@ layout: default
                         </span>
 					</p>
 					<h1 class="display-4 mb-4 article-headline">{{ page.title }}</h1>
-					<div class="d-flex align-items-center">
-                        <p class="text-uppercase font-weight-bold">
-							<span class="catlist">
-							{% for postauthor in authors %}
-							{% assign siteauthor = site.authors | where:"key", postauthor | first %}
-							  <a class="sscroll text-danger" href="{{ siteauthor.url }}">{{ siteauthor.title }}</a><span class="sep">, </span>
-							{% endfor %}
-							</span>
-						</p>
-					</div>
 				</div>
                 {% if page.image %}
 				<div class="row justify-content-center">
-					<div class="col-md-8 pr-2 align-self-center">
+					<div class="col-md-6 pr-2 align-self-center">
 						<img class="rounded" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
 					</div>
 				</div>

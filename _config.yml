@@ -74,7 +74,7 @@ highlighter: rouge
 feed:
   collections:
     products:
-      path: "/urunler/feed.xml"
+      path: "/eserler/feed.xml"
 
 # excerpt
 excerpt_separator: <!--more-->
@@ -90,7 +90,7 @@ sass:
 collections:
   products:
     output: true
-    permalink: /urunler/:title
+    permalink: /eserler/:title
     
   slides: 
     output: false

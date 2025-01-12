@@ -1,0 +1,25 @@
+<div class="container pdf-container">
+    {% assign cdn_prefix = "https://cdn.efehazretleri.org.tr" %}
+    <div id="pdfRow" class="row add-bottom mb-4">
+        {% for doc in page.docs %}
+            <div class="col-6 col-md-4 pb-3">
+                <button onclick="showPdf('{{ cdn_prefix }}/{{ doc[1] }}')" class="btn btn-info" role="button">
+                    <i class="far fa-file-pdf pr-2"></i> {{ doc[0] }}
+                </button>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div id="pdfViewer" class="row" style="display: none;">
+        <div class="col-12">
+            <embed id="pdfEmbed" src="" type="application/pdf" width="100%" height="600px" />
+        </div>
+    </div>
+</div>
+
+<script>
+function showPdf(pdfPath) {
+    document.getElementById('pdfViewer').style.display = 'block';
+    document.getElementById('pdfEmbed').src = pdfPath;
+}
+</script>

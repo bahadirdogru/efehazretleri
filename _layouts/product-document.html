@@ -1,0 +1,68 @@
+---
+layout: default
+---
+{% assign product = page %}
+
+<div class="container">
+<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+		<div class="h-100 tofront">
+			<div class="row {% if product.image %} justify-content-between {% else %} justify-content-center {% endif %}">
+				
+				{% if product.image %}
+				<div class="col-md-3 pr-0 align-self-center">
+					<img class="rounded-circle" style="max-height: 30vh;" src="{% if product.image contains "://" %}{{ product.image }}{% else %}{{ site.baseurl }}/{{ product.image }}{% endif %}" alt="{{ product.title }}">
+				</div>
+                {% endif %}
+
+				<div class="{% if product.image %} col-md-9 {% else %} col-md-8 {% endif %} pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+					<p class="text-uppercase font-weight-bold">
+						{% if product.tags %}
+							<span class="catlist">
+							{% for tag in product.tags %}
+							<a class="sscroll text-danger" href="{{site.baseurl}}/tags.html#{{ tag | downcase }}">{{ tag | downcase }}</a><span class="sep">, </span>
+							{% endfor %}
+							</span>
+						{% endif %}
+					</p>
+					{% if product.title %}
+					<h1 class="display-4 mb-4 article-headline">{{ product.title }}</h1>
+					{% endif %}
+					{% if product.type == "document" %}
+					<a href="#yazili-eserler" class="btn btn-outline-secondary" role="button" aria-pressed="true"><i class="far fa-file-alt pr-2"></i>Yazılı Eserleri</a>
+					{% endif %}
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div class="container-lg pt-4 pb-4">
+	<div class="row justify-content-center">
+        
+		<div class="col-md-12">
+            
+            <!-- Article -->
+			<article class="article-post">                
+			{{ product.content }}                
+			</article>
+
+			<!-- yazili eserler -->
+			{% if product.type == "document" %}
+			<h4 class="font-weight-bold spanborder"><span id="yazili-eserler">{{product.title}} Yazılı Eserleri</span></h4>
+			<div class="row mb-3">
+				
+				{% include doc.html %}
+			</div>
+			{% endif %}
+			<!-- yazili eserler -->
+            
+            
+		</div>
+        
+        
+	</div>
+</div>

@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/music.css">
+<!-- <link rel='stylesheet prefetch' href='https://cdn.plyr.io/2.0.13/plyr.css'> -->
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/plyr.css">
+<style>
+   .audio-container ul{
+       list-style: none;
+   }
+</style>
+<div class="container audio-container">
+    <div class="column add-bottom">
+        <div id="mainwrap">
+            <div id="div_main">
+                <div id="nowPlay">
+                    <span class="left" id="npAction">Duraklatıldı...</span>
+                    <span class="right" id="npTitle"></span>
+                </div>
+                <div id="audiowrap">
+                    <div id="audio0">
+                        <audio preload id="audio1" controls="controls">Tarayıcınız Ses Dosyalarını Açamıyor!</audio>
+                    </div>
+                    <div id="tracks" style="text-align: center;">
+                        <a id="btnPrev">&larr;</a>
+                        <a id="btnNext">&rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="plwrap" class="content">
+                <ul id="plList"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    console.log("bahadır");
+    var playlist = [
+    {% for music in page.musics %}
+
+        {
+        "track": {{ forloop.index }},
+        "name":  "{{ music[0] }}",
+        "duration": "{{ music[1] }}",
+        "file": "{{ music[2] }}"
+        },
+
+    {% endfor %}
+
+    ];
+
+</script>
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/plyr/2.0.18/plyr.js'></script> -->
+<script src="{{ site.baseurl }}/assets/js/plyr.js"></script>
+<script src="{{ site.baseurl }}/assets/js/music.js"></script>
