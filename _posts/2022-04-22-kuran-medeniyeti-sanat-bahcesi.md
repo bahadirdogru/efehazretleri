@@ -14,7 +14,7 @@ featured: true
 
 {% include video.html type="url" video='https://cdn.efehazretleri.org.tr/video-icerigi/kuran-medeniyeti-sanat-bahcesi-tanitim-video.mp4' %}
 
-![Medeniyet Bahçesi](assets/images/posts/medniyetbahcesi1.jpg)
+![Medeniyet Bahçesi](/assets/images/posts/medniyetbahcesi1.jpg)
 
 Hiç kuşku yok ki, İslam bir medeniyet dinidir. Farklı kavimlerin, kültür ve medeniyetlerine çalınan İslam mayası, 14 asır boyunca demlenerek zengin İslâm Medeniyeti'ni vücuda getirmiştir.
 
@@ -34,7 +34,7 @@ Kur'an'da cennet; ağaçlarla gölgelendirilmiş, nar ve hurma ağaçlarının b
 
 İslam bahçeleri tipik olarak merkezde bir pınar ve bu pınardan su alarak dört yana dağılan yürüyüş yolları veya su kanallarından oluşur.
 
-![Cennet-ül Arif Bahçeleri](assets/images/posts/medeniyetbahcesi3.jpg)
+![Cennet-ül Arif Bahçeleri](/assets/images/posts/medeniyetbahcesi3.jpg)
 *Cennet-ül Arif Bahçeleri, El Hamra Sarayı, İspanya*
 
 ## İslam Bahçelerinde Sayılar ve Anlamları
@@ -59,7 +59,7 @@ Bundan başka, Allah'ın her yerde var olduğu, var olan her şeyin Rabbi olduğ
 
 İslâm bahçe sanatı eserlerinden günümüze, az değişikliğe uğrayarak intikal edebilen örneklere, daha ziyade İslâm'ın hüküm sürdüğü bazı ülkelerde, batıda İspanyadan "El Hamra", Fas'ta "Marakeş", doğuda İran'da "Şiraz" ve Hindistan'da "Tac Mahal"e rastlamak mümkündür.[^10]
 
-![Tac Mahal](assets/images/posts/medeniyetbahcesi4.jpg)
+![Tac Mahal](/assets/images/posts/medeniyetbahcesi4.jpg)
 *Tac-Mahal, Agra. Şah Cihan'ın yaptırdığı anıt kabir çar-bağ bahçe tasarımının en güzel örneklerindendir.*
 
 Bahçe kavramından Allah'ın sınırsız kudretiyle insan kabiliyetleri arasındaki yüksek nitelikli bir tezahür ve mükemmel bir uyum anlaşılabilir. Dünyadaki cennet arayışı esasında barış, sağlık, afiyet ve selamet arayışıdır.
