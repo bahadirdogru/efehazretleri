@@ -133,22 +133,120 @@ description: "Efe Hazretleri Vakfı"
     
 </div>
 
+<!-- Second section of post highlight with rest of the posts -->
+<div class="row add-site-content-margin">
+    
+    <!-- fifth post -->
+    {% assign fifth_post = site.posts[4] %}
+    <div class="col-md-6">
+        <div class="mb-3 d-flex align-items-center">
+            {% if fifth_post.image %}
+            <div class="row">
+                <div class="col-6">
+                    <a href="{{site.baseurl}}{{fifth_post.url}}">
+                        <img class="w-100" src="{% if fifth_post.image contains "://" %}{{ fifth_post.image }}{% else %}{{site.baseurl}}/{{ fifth_post.image }}{% endif %}" alt="{{ fifth_post.title }}">
+                    </a>
+                </div>
+                <div class="col-6">
+                    <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="{{site.baseurl}}{{fifth_post.url}}">{{ fifth_post.title }}</a>
+                    </h2>
+                    <small class="d-block text-muted">
+                        {{ fifth_post.excerpt | strip_html | strip_newlines | truncate: 250 }}
+                    </small>
+                </div>
+            </div>
+            {% else %}
+            <div>
+                <h2 class="mb-2 h6 font-weight-bold">
+                    <a class="text-dark" href="{{site.baseurl}}{{fifth_post.url}}">{{ fifth_post.title }}</a>
+                </h2>
+            </div>
+            {% endif %}
+        </div>
 
-<h4 class="font-weight-bold spanborder"><span>Yeni Çıkanlar</span></h4>
-{% assign bookarray = "" | split: ',' %}
-{% assign sortedarray = "" | split: ',' %}
+        <!-- sixth post -->
+        {% assign sixth_post = site.posts[5] %}
+        <div class="mb-3 d-flex align-items-center">
+            {% if sixth_post.image %}
+            <div class="row">
+                <div class="col-6">
+                    <a href="{{site.baseurl}}{{sixth_post.url}}">
+                        <img class="w-100" src="{% if sixth_post.image contains "://" %}{{ sixth_post.image }}{% else %}{{site.baseurl}}/{{ sixth_post.image }}{% endif %}" alt="{{ sixth_post.title }}">
+                    </a>
+                </div>
+                <div class="col-6">
+                    <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="{{site.baseurl}}{{sixth_post.url}}">{{ sixth_post.title }}</a>
+                    </h2>
+                    <small class="d-block text-muted">
+                        {{ sixth_post.excerpt | strip_html | strip_newlines | truncate: 250 }}
+                    </small>
+                </div>
+            </div>
+            {% else %}
+            <div>
+                <h2 class="mb-2 h6 font-weight-bold">
+                    <a class="text-dark" href="{{site.baseurl}}{{sixth_post.url}}">{{ sixth_post.title }}</a>
+                </h2>
+            </div>
+            {% endif %}
+        </div>
+    </div>
 
-{% assign sortedarray = site.products | sort: "publish-number" | reverse %}
+    <!-- seventh post -->
+    {% assign seventh_post = site.posts[6] %}
+    <div class="col-md-6">
+        <div class="card border-0 mb-4 box-shadow">
+            <a href="{{site.baseurl}}{{seventh_post.url}}">
+                <div class="topfirstimage" style="background-image: url({% if seventh_post.image contains "://" %}{{ seventh_post.image }}{% else %} {{site.baseurl}}/{{ seventh_post.image}}{% endif %}); height: 200px; background-size: cover; background-repeat: no-repeat;"></div>
+            </a>
+            <div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
+                <h2 class="h4 font-weight-bold">
+                    <a class="text-dark" href="{{site.baseurl}}{{seventh_post.url}}">{{ seventh_post.title }}</a>
+                </h2>
+                <p class="excerpt">
+                    {{ seventh_post.excerpt | strip_html | strip_newlines | truncate: 400 }}
+                </p>
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-{% for product in sortedarray limit:10 %}
-    {% assign productarray = productarray | push: product %}
-{% endfor %}
+    <!-- eighth post -->
+    {% assign eighth_post = site.posts[7] %}
+    <div class="col-md-6">
+        <div class="mb-3 d-flex align-items-center">
+            {% if eighth_post.image %}
+            <div class="row">
+                <div class="col-6">
+                    <a href="{{site.baseurl}}{{eighth_post.url}}">
+                        <img class="w-100" src="{% if eighth_post.image contains "://" %}{{ eighth_post.image }}{% else %}{{site.baseurl}}/{{ eighth_post.image }}{% endif %}" alt="{{ eighth_post.title }}">
+                    </a>
+                </div>
+                <div class="col-6">
+                    <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="{{site.baseurl}}{{eighth_post.url}}">{{ eighth_post.title }}</a>
+                    </h2>
+                    <small class="d-block text-muted">
+                        {{ eighth_post.excerpt | strip_html | strip_newlines | truncate: 250 }}
+                    </small>
+                </div>
+            </div>
+            {% else %}
+            <div>
+                <h2 class="mb-2 h6 font-weight-bold">
+                    <a class="text-dark" href="{{site.baseurl}}{{eighth_post.url}}">{{ eighth_post.title }}</a>
+                </h2>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
 
-{% assign products = productarray %}
-{% include product-slider.html %}
 
-<!-- {% assign books = site.books %}
-{% include product-slider.html %}
+
    
 <!-- Sticky - add sticky tag to the post you want to highlight here - tags: [sticky] -->
 {% for post in site.posts %} 
