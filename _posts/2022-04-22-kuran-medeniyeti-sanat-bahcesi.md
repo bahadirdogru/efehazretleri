@@ -3,7 +3,7 @@ layout: post
 title:  "KUR’AN MEDENİYETİ SANAT BAHÇESİ"
 authors: #["sara-gurbuz-ozeren"]
 categories: [ Mushaf ]
-image: assets/images/posts/medniyetbahcesi1.jpg
+image: assets/images/posts/medeniyetbahcesi1.jpg
 tags: ["Kuran Medeniyeti","Kur'an-ı Kerim","Hüseyin Kutlu"]
 sticky: false
 featured: true
@@ -13,8 +13,6 @@ featured: true
 # KUR'AN MEDENİYETİ SANAT BAHÇESİ
 
 {% include video.html type="url" video='https://cdn.efehazretleri.org.tr/video-icerigi/kuran-medeniyeti-sanat-bahcesi-tanitim-video.mp4' %}
-
-![Medeniyet Bahçesi](/assets/images/posts/medniyetbahcesi1.jpg)
 
 Hiç kuşku yok ki, İslam bir medeniyet dinidir. Farklı kavimlerin, kültür ve medeniyetlerine çalınan İslam mayası, 14 asır boyunca demlenerek zengin İslâm Medeniyeti'ni vücuda getirmiştir.
 
@@ -35,8 +33,8 @@ Kur'an'da cennet; ağaçlarla gölgelendirilmiş, nar ve hurma ağaçlarının b
 İslam bahçeleri tipik olarak merkezde bir pınar ve bu pınardan su alarak dört yana dağılan yürüyüş yolları veya su kanallarından oluşur.
 
 ![Cennet-ül Arif Bahçeleri](/assets/images/posts/medeniyetbahcesi3.jpg)
-*Cennet-ül Arif Bahçeleri, El Hamra Sarayı, İspanya*
 
+*Cennet-ül Arif Bahçeleri, El Hamra Sarayı, İspanya*
 ## İslam Bahçelerinde Sayılar ve Anlamları
 
 Dört sayısı, dört yön ve dört unsurdan oluşmuş olma itibarıyla kâinatın düzenini temsil eder. Bu aynı zamanda cennette bulunan su, süt, bal ve şarap gibi dört ırmağı da gösterir.[^4] Çar Bağ kavramı da bu dört unsurdan kaynaklanır. Sekiz sayısı ise tasarıma sekizgen şekilli bir havuz olarak yansımaktadır.
@@ -60,6 +58,7 @@ Bundan başka, Allah'ın her yerde var olduğu, var olan her şeyin Rabbi olduğ
 İslâm bahçe sanatı eserlerinden günümüze, az değişikliğe uğrayarak intikal edebilen örneklere, daha ziyade İslâm'ın hüküm sürdüğü bazı ülkelerde, batıda İspanyadan "El Hamra", Fas'ta "Marakeş", doğuda İran'da "Şiraz" ve Hindistan'da "Tac Mahal"e rastlamak mümkündür.[^10]
 
 ![Tac Mahal](/assets/images/posts/medeniyetbahcesi4.jpg)
+
 *Tac-Mahal, Agra. Şah Cihan'ın yaptırdığı anıt kabir çar-bağ bahçe tasarımının en güzel örneklerindendir.*
 
 Bahçe kavramından Allah'ın sınırsız kudretiyle insan kabiliyetleri arasındaki yüksek nitelikli bir tezahür ve mükemmel bir uyum anlaşılabilir. Dünyadaki cennet arayışı esasında barış, sağlık, afiyet ve selamet arayışıdır.
@@ -77,9 +76,9 @@ diyerek bu duruma dikkat çeker. Bu bahçe cennete ne kadar benzetilebilirse cen
 
 ## Mihrabad İslâm Medeniyeti Sanat Bahçesi
 
-18. yüzyılda kurulan Atâullah Efendi Tekkesi'nin Alvarlı Efe Hazretleri Vakfı'na tahsis edilmesinden sonra tekke bünyesinde bulunan tüm mekânları, restorasyon ve restitüsyon çalışmalarıyla aslına uygun olacak şekilde dönüştürdük.
+18.Yüzyılda kurulan Atâullah Efendi Tekkesi'nin Alvarlı Efe Hazretleri Vakfı'na tahsis edilmesinden sonra tekke bünyesinde bulunan tüm mekânları, restorasyon ve restitüsyon çalışmalarıyla aslına uygun olacak şekilde dönüştürdük.
 
-![Tekke Restorasyonu](assets/images/posts/medeniyetbahcesi7.jpg)
+![Tekke Restorasyonu](/assets/images/posts/medeniyetbahcesi7.jpg)
 
 Tekkedeki tüm mekânları asli fonksiyonuna kavuştururken ortaya çıkan cami ihtiyacını, tezyinî sanatlarımızla bezenmiş yeni bir cami inşa ederek karşılamış olduk. Abdülvehhâb Efendi Camii, mimarisi tekke manzumesiyle uyumlu olacak şekilde üslûplaştırılmış tarzda inşa edildi. Bu cami, İslâm Medeniyeti Sanat Bahçesi'nin kalbi olarak tasavvur edildi.
 

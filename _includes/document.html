@@ -1,0 +1,29 @@
+<div class="container pdf-container">
+    {% assign cdn_prefix = "https://cdn.efehazretleri.org.tr" %}
+    <div id="pdfRow" class="row add-bottom mb-4">
+        <ul class="list-group w-100">
+            {% for doc in page.docs %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>
+                        <i class="far fa-file-pdf pr-2"></i> {{ doc[0] }}
+                    </span>
+                    <a href="#" onclick="showPdf('{{ cdn_prefix }}/{{ doc[1] }}'); return false;" class="btn btn-info btn-sm">
+                        Görüntüle
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id="pdfEmbed" style="display: none;">
+        <iframe id="pdfViewer" width="100%" height="600px"></iframe>
+    </div>
+</div>
+
+<script>
+    function showPdf(url) {
+        document.getElementById('pdfViewer').src = url;
+        document.getElementById('pdfEmbed').style.display = 'block';
+        document.getElementById('pdfEmbed').scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
