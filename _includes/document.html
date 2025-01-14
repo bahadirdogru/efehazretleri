@@ -5,24 +5,66 @@
             {% for doc in page.docs %}
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <span>
-                        <i class="far fa-file-pdf pr-2"></i> {{ doc[0] }}
+                        {% assign extension = doc[1] | split: "." | last %}
+                        {% case extension %}
+                            {% when "pdf" %}
+                                <i class="far fa-file-pdf pr-2"></i>
+                            {% when "doc" or "docx" %}
+                                <i class="far fa-file-word pr-2"></i>
+                            {% when "jpg" or "jpeg" or "png" %}
+                                <i class="far fa-file-image pr-2"></i>
+                        {% endcase %}
+                        {{ doc[0] }}
                     </span>
-                    <a href="#" onclick="showPdf('{{ cdn_prefix }}/{{ doc[1] }}'); return false;" class="btn btn-info btn-sm">
-                        Görüntüle
-                    </a>
+                    <div class="btn-group gap-1">
+                        <a href="#" onclick="showDocument('{{ cdn_prefix }}/{{ doc[1] }}'); return false;" class="btn btn-info btn-sm">
+                            <i class="far fa-eye"></i> Görüntüle
+                        </a>
+                        <a href="{{ cdn_prefix }}/{{ doc[1] }}" download target="_blank" class="btn btn-success btn-sm">
+                            <i class="fas fa-download"></i> İndir
+                        </a>
+                    </div>
                 </li>
             {% endfor %}
         </ul>
     </div>
 
     <div id="pdfEmbed" style="display: none;">
-        <iframe id="pdfViewer" width="100%" height="600px"></iframe>
+        <iframe id="documentViewer" width="100%" height="600px"></iframe>
     </div>
 </div>
 
 <script>
-    function showPdf(url) {
-        document.getElementById('pdfViewer').src = url;
+    function showDocument(url) {
+        const extension = url.split('.').pop().toLowerCase();
+        let viewerUrl;
+        
+        switch(extension) {
+            case 'pdf':
+                viewerUrl = url;
+                break;
+            case 'doc':
+            case 'docx':
+                // Microsoft Office Online Viewer
+                viewerUrl = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(url);
+                break;
+            case 'jpg':
+            case 'jpeg':
+            case 'png':
+                // Resim için özel iframe içeriği
+                document.getElementById('documentViewer').src = '';
+                document.getElementById('documentViewer').style.background = `url(${url}) center center no-repeat`;
+                document.getElementById('documentViewer').style.backgroundSize = 'contain';
+                document.getElementById('pdfEmbed').style.display = 'block';
+                document.getElementById('pdfEmbed').scrollIntoView({ behavior: 'smooth' });
+                return;
+            default:
+                // Google Docs Viewer (yedek seçenek)
+                viewerUrl = 'https://docs.google.com/viewer?url=' + encodeURIComponent(url) + '&embedded=true';
+        }
+        
+        document.getElementById('documentViewer').style.background = 'none';
+        document.getElementById('documentViewer').src = viewerUrl;
         document.getElementById('pdfEmbed').style.display = 'block';
         document.getElementById('pdfEmbed').scrollIntoView({ behavior: 'smooth' });
     }
