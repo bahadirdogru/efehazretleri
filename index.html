@@ -35,16 +35,7 @@ description: "Efe Hazretleri Vakfı"
         {{ latest_post.excerpt | strip_html | strip_newlines | truncate: 400 }}
     </p>
     <div>
-        <small class="d-block text-muted">
-            Kategori: <span class="catlist">
-                {% for category in latest_post.categories %}
-                <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/kategoriler.html#{{ category | downcase | slugify  }}">{{ category }}</a><span class="sep">, </span>
-                {% endfor %}
-                </span>                   
-        </small>
-        <small class="text-muted">
-            {{ latest_post.date | date: '%d.%m.%Y' }}
-        </small>
+
     </div>
     </div>
     </div>
@@ -67,14 +58,7 @@ description: "Efe Hazretleri Vakfı"
                         <a class="text-dark" href="{{site.baseurl}}{{second_post.url}}">{{ second_post.title }}</a>
                         </h2>
                         <small class="d-block text-muted">
-                            Kategori: <span class="catlist">
-                            {% for category in second_post.categories %}
-                            <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/kategoriler.html#{{ category | downcase | slugify }}">{{ category }}</a><span class="sep">, </span>
-                            {% endfor %}
-                            </span>                   
-                        </small>
-                        <small class="text-muted">
-                            {{ second_post.date | date: '%d.%m.%Y' }}
+                            {{ second_post.excerpt | strip_html | strip_newlines | truncate: 250 }}
                         </small>
                     </div>
                 </div>
@@ -83,16 +67,6 @@ description: "Efe Hazretleri Vakfı"
                     <h2 class="mb-2 h6 font-weight-bold">
                     <a class="text-dark" href="{{site.baseurl}}{{second_post.url}}">{{ second_post.title }}</a>
                     </h2>
-                    <small class="d-block text-muted">
-                        Kategori: <span class="catlist">
-                        {% for category in second_post.categories %}
-                        <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/kategoriler.html#{{ category | downcase | slugify }}">{{ category }}</a><span class="sep">, </span>
-                        {% endfor %}
-                        </span>                   
-                    </small>
-                    <small class="text-muted">
-                        {{ second_post.date | date: '%d.%m.%Y' }}
-                    </small>
                 </div>
                 {% endif %} 
             </div>
@@ -112,14 +86,7 @@ description: "Efe Hazretleri Vakfı"
                         <a class="text-dark" href="{{site.baseurl}}{{third_post.url}}">{{ third_post.title }}</a>
                         </h2>
                         <small class="d-block text-muted">
-                            Kategori: <span class="catlist">
-                            {% for category in third_post.categories %}
-                            <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/kategoriler.html#{{ category | downcase | slugify }}">{{ category }}</a><span class="sep">, </span>
-                            {% endfor %}
-                            </span>                   
-                        </small>
-                        <small class="text-muted">
-                            {{ third_post.date | date: '%d.%m.%Y' }}
+                            {{ third_post.excerpt | strip_html | strip_newlines | truncate: 250 }}
                         </small>
                     </div>
                 </div>
@@ -128,16 +95,6 @@ description: "Efe Hazretleri Vakfı"
                     <h2 class="mb-2 h6 font-weight-bold">
                     <a class="text-dark" href="{{site.baseurl}}{{third_post.url}}">{{ third_post.title }}</a>
                     </h2>
-                    <small class="d-block text-muted">
-                        Kategori: <span class="catlist">
-                        {% for category in third_post.categories %}
-                        <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/kategoriler.html#{{ category | downcase | slugify }}">{{ category }}</a><span class="sep">, </span>
-                        {% endfor %}
-                        </span>                   
-                    </small>
-                    <small class="text-muted">
-                        {{ third_post.date | date: '%d.%m.%Y' }}
-                    </small>
                 </div>
                 {% endif %}  
             </div>
@@ -157,14 +114,7 @@ description: "Efe Hazretleri Vakfı"
                         <a class="text-dark" href="{{site.baseurl}}{{fourth_post.url}}">{{ fourth_post.title }}</a>
                         </h2>
                         <small class="d-block text-muted">
-                            Kategori: <span class="catlist">
-                            {% for category in fourth_post.categories %}
-                            <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/kategoriler.html#{{ category | downcase | slugify }}">{{ category }}</a><span class="sep">, </span>
-                            {% endfor %}
-                            </span>                   
-                        </small>
-                        <small class="text-muted">
-                            {{ fourth_post.date | date: '%d.%m.%Y' }}
+                            {{ fourth_post.excerpt | strip_html | strip_newlines | truncate: 250 }}
                         </small>
                     </div>
 
@@ -175,16 +125,6 @@ description: "Efe Hazretleri Vakfı"
                     <h2 class="mb-2 h6 font-weight-bold">
                     <a class="text-dark" href="{{site.baseurl}}{{fourth_post.url}}">{{ fourth_post.title }}</a>
                     </h2>
-                    <small class="d-block text-muted">
-                        Kategori: <span class="catlist">
-                        {% for category in fourth_post.categories %}
-                        <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/kategoriler.html#{{ category | downcase | slugify }}">{{ category }}</a><span class="sep">, </span>
-                        {% endfor %}
-                        </span>                   
-                    </small>
-                    <small class="text-muted">
-                        {{ fourth_post.date | date: '%d.%m.%Y' }}
-                    </small>
                 </div>
                 {% endif %}  
             </div>
