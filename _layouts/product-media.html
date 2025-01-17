@@ -28,10 +28,10 @@ layout: default
 					<h1 class="display-4 mb-4 article-headline">{{ product.title }}</h1>
 					{% endif %}
 					{% if product.type == "music" %}
-					<a href="#sesli-eserler" class="btn btn-outline-info" role="button" aria-pressed="true"> <i class="far fa-file-audio pr-2"></i> Sesli Eserleri</a>
+					<a href="#sesli-eserler" class="btn btn-outline-info" role="button" aria-pressed="true"> <i class="far fa-file-audio pr-2"></i>Sesli Eserler</a>
 					{% endif %}
 					{% if product.type == "document" %}
-					<a href="#yazili-eserler" class="btn btn-outline-secondary" role="button" aria-pressed="true"><i class="far fa-file-alt pr-2"></i>Yazılı Eserleri</a>
+					<a href="#yazili-eserler" class="btn btn-outline-secondary" role="button" aria-pressed="true"><i class="far fa-file-alt pr-2"></i>Yazılı Eserler</a>
 					{% endif %}
 
 				</div>
@@ -55,7 +55,7 @@ layout: default
 			
             <!-- Sesli eserler -->
 			{% if product.type == "music" %}
-			<h4 class="font-weight-bold spanborder"><span id="sesli-eserler">{{product.title}} Sesli Eserleri</span></h4>
+			<h4 class="font-weight-bold spanborder"><span id="sesli-eserler">{{product.title}}</span></h4>
 			<div class="row mb-3">
 				
 				{% include music.html %}
@@ -65,10 +65,10 @@ layout: default
 
 			<!-- yazili eserler -->
 			{% if product.type == "document" %}
-			<h4 class="font-weight-bold spanborder"><span id="yazili-eserler">{{product.title}} Yazılı Eserleri</span></h4>
+			<h4 class="font-weight-bold spanborder"><span id="yazili-eserler">{{product.title}}</span></h4>
 			<div class="row mb-3">
 				
-				{% include doc.html %}
+				{% include document.html %}
 			</div>
 			{% endif %}
 			<!-- yazili eserler -->

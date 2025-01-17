@@ -2,6 +2,8 @@
 layout: default
 ---
 {% assign authors = page.authors %}
+
+
 <div class="container">
 <div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
 		<div class="h-100 tofront">
@@ -29,16 +31,17 @@ layout: default
 </div>
 
 
-
-
-
 <div class="container-lg pt-4 pb-4">
 	<div class="row justify-content-center">
         
         
 		<div class="col-md-12 col-lg-8">
+
+			<!-- İçindekiler tablosunun ekleneceği div -->
+			<div id="toc-container"></div>
+		<hr>
             
-            <!-- Article -->
+		<!-- Article -->
 			<article class="article-post">                
 			{{ content }}                
 			</article>
@@ -47,13 +50,42 @@ layout: default
 			<div class="mb-4">
 				<span class="taglist">
 				{% for tag in page.tags %}
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="{{site.baseurl}}/tags.html#{{ tag |  downcase | slugify: 'latin' }}">#{{ tag | downcase }}</a>
+				<a class="sscroll btn btn-light btn-sm font-weight-bold" href="{{site.baseurl}}/tags.html#{{ tag |  downcase | slugify: 'latin' }}">#{{ tag | downcase }}</a>
 				{% endfor %}
 				</span>
 			</div>
+            
             
 		</div>
         
         
 	</div>
 </div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		// Başlıkları topla
+		const headers = document.querySelectorAll("h2, h3");
+		if (headers.length > 0) {
+			// İçerik tablosu için bir div oluştur
+			const tocDiv = document.createElement("div");
+			tocDiv.innerHTML = "<div id='toc' class='taglist'></div>";
+			document.getElementById('toc-container').appendChild(tocDiv);
+
+			const tocList = document.getElementById("toc");
+
+			headers.forEach((header, index) => {
+				// Her başlık için bir id oluştur
+				const id = `header-${index}`;
+				header.setAttribute("id", id);
+
+				// İçerik tablosuna başlık ekle
+				const link = document.createElement("a");
+				link.className = 'sscroll btn btn-light btn-sm font-weight-bold';
+				link.href = `#${id}`;
+				link.textContent = header.textContent;
+				tocList.appendChild(link);
+			});
+		}
+	});
+</script>

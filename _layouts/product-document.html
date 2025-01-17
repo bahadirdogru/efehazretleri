@@ -28,7 +28,7 @@ layout: default
 					<h1 class="display-4 mb-4 article-headline">{{ product.title }}</h1>
 					{% endif %}
 					{% if product.type == "document" %}
-					<a href="#yazili-eserler" class="btn btn-outline-secondary" role="button" aria-pressed="true"><i class="far fa-file-alt pr-2"></i>Yazılı Eserleri</a>
+					<a href="#yazili-eserler" class="btn btn-outline-secondary" role="button" aria-pressed="true"><i class="far fa-file-alt pr-2"></i>Yazılı Eserler</a>
 					{% endif %}
 
 				</div>
@@ -52,7 +52,7 @@ layout: default
 
 			<!-- yazili eserler -->
 			{% if product.type == "document" %}
-			<h4 class="font-weight-bold spanborder"><span id="yazili-eserler">{{product.title}} Yazılı Eserleri</span></h4>
+			<h4 class="font-weight-bold spanborder"><span id="yazili-eserler">{{product.title}}</span></h4>
 			<div class="row mb-3">
 				
 				{% include document.html %}

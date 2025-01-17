@@ -115,6 +115,59 @@
     <script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>
     {% endif %}
 
+    <!-- Sayfanın en üstüne gitmek için buton -->
+    <button id="scrollToTopBtn" class="scroll-to-top-btn" style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 1000;">
+        ↑ Yukarı Çık
+    </button>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // Sayfa kaydırıldığında butonu göster/gizle
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        });
+
+        // Butona tıklanınca sayfanın en üstüne git
+        scrollToTopBtn.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    });
+    </script>
+
+    <style>
+    .scroll-to-top-btn {
+        background-color: #b0b0b0; /* Soluk gri metalik renk */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .scroll-to-top-btn:hover {
+        background-color: #a0a0a0; /* Hover durumunda biraz daha koyu */
+    }
+
+    /* Mobil cihazlar için buton boyutunu ayarlayın */
+    @media (max-width: 768px) {
+        .scroll-to-top-btn {
+            width: 50px;
+            height: 50px;
+            font-size: 14px;
+        }
+    }
+    </style>
 
 </body>
 

@@ -1,0 +1,19 @@
+---
+title: "Besteler"
+layout: default
+permalink: "/besteler"
+---
+
+<div class="container">
+    {% assign besteler_products = site.products | where: "categories", "Besteler" %}
+    <div class="row gap-y listrecent listrecent listauthor">
+        {% for product in besteler_products %}
+            <div class="col-12 col-sm-3 p-4 border rounded kitap-kutu">
+                <a class="baslik-link" href="{{ product.url }}">            
+                    <img class="cover-images" src="{{site.baseurl}}/{{ product.image }}" alt="">
+                    <h4 class="text-dark mb-0"> {{ product.title }} </h4>
+                </a>
+            </div>  
+        {% endfor %}
+    </div>
+</div>

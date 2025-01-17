@@ -9,9 +9,20 @@ baseurl: ''
 url: 'https://efehazretleri.org.tr'
 lang: "tr"
 email: 'iletisim@efehazretleri.org.tr'
-cdn: 'https://cdn.efehazretleri.org.tr/'
+cdn:
+  enabled: true
+  baseurl: 'https://cdn.efehazretleri.org.tr/'
+  book: 'sayfa-icerigi/'
+  document: 'yazi-icerigi/'
+  music: 'muzik-icerigi/'
+  video: 'video-icerigi/'
+  image: 'resim-icerigi/'
 
-
+pagepreview:
+  enabled: false
+  prefix: 'https://cdn.efehazretleri.org.tr/sayfa-icerigi/'
+  postfix: '/index.html'
+ 
 # Google Analytics and Adsence Settings
 google_analytics: 'G-KFMVQ3WNN3'
 # Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
