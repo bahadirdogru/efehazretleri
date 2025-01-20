@@ -14,7 +14,7 @@ Toplumun her türlü ilmî, ictimaî, maddî ve manevî kalkınmasına hizmet et
 
 İstanbul Bulgurlu’da inşa edilen Alvarlızade Hâce Seyfeddin Efendi Camii, Erzurum Alvar’da inşaası tamamlanan Efe Hazretleri Türbesi, Camii ve Müştemilâtı, İstanbul Fatih’te Uygulamalı Türk-İslam Sanatları Kütüphanesi, Kanlıca Atâullah Efendi Tekkesi Restorasyonu, Tekke’nin 14.500 m2’lik alanında tesis edilen İslam Medeniyeti Sanat Bahçesi ve Kur'an Medeniyeti Merkezi projesi kaybolan medeniyetimizi arama ve ona yeniden kavuşma yolunda atılan samimi adımlardır.
 
-![Vakıf Amacı](/assets/images/vakifamaci.jpg)
+![Vakıf Amacı](/assets/images/posts/erzurum-vakif.png)
 
 ## Vakıf Medeniyeti
 
@@ -28,7 +28,6 @@ Vakıflar, İslam'ın bütün varlık âlemine karşı şefkat ve merhametinin m
 
 Gerçekte dinî-hukukî bir kuruluş olan vakıflar, insanlığa hizmet yolunda kültür ve sanatla yan yana yürümüş, onların yayılması ve gelişmesinde önemli rol oynamıştır. Büyük bölümü vakıflarla desteklenen farklı tarikatlara ait tekke, hankâh ve zaviyelerde meydana getirilen musıkî eserleri, âyin icraları, sanat eserleri, halk dilinde kaleme alınan edebî ve tasavvufî eserler, halkın kültür ve sanat seviyesini yükselterek toplumda halk irfanının gelişmesine ve yerleşmesine katkı sağlamıştır.
 
-![Vakıf Medeniyeti](/assets/images/vakifmedeniyeti.jpg)
 
 1. Müslim, Vasiyyet, 14.
 2. Buhârî, Mağâzî, 35.
