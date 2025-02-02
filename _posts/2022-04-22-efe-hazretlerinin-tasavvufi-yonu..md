@@ -14,7 +14,7 @@ featured: true
 
 Sivaslı Câmi-i Şerifi'nde imamlığa başladığı 1307 / 1890 yılında, muhterem babasıyla berâber Bitlis'e Muhammed Küfrevî'nin ziyâretine giden Efe Hazretleri, o mukaddes zâtın kudsî nazarıyla kâmil bir insan hüviyetini kazandı. Hazret-i Pîr Muhammed Küfrevî, Hâce Hüseyin Efendi'ye halîfelik icâzeti verdi ve "Muhammed Efendi'yi de sana yardımcı ta'yîn ettim" buyurdu. Efe Hazretleri beş yıl sonra 1312/1894-1895 tarihinde Hazret-i Pîr'den halîfelik icâzeti aldı.
 
-![Muhammed Küfrevî Hazretleri'nin Türbesi – Bitlis](/assets/images/posts/muhammedkufrevihazretlerininturbesi.jpg)
+![Muhammed Küfrevî Hazretleri'nin Türbesi – Bitlis](/assets/images/posts/muhammedkufrevihazretlerininturbesi.webp)
 *Muhammed Küfrevî Hazretleri'nin Türbesi – Bitlis*
 
 ***Efe Hazretleri'nin Bitlis'e Gidişlerini Anlatan Manzûmesi***

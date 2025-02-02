@@ -1,5 +1,9 @@
 # Efe Hazretleri'nin Hilâfet İcâzeti
 
+![Efe Hazretleri Hilafet İcâzeti](/assets/images/posts/icazetnamebaskisim.webp)
+![Efe Hazretleri Hilafet İcâzeti](/assets/images/posts/icazetnamesonkisim.webp)
+
+
 İkram bulutundan ma'rifet yağmurlarını dostlarının kalbine döken, böylece seçkin kullarının hatır sayfalarından kendisinden başkalarının harflerinin nakışlarını silen, hikmet pınarlarını denizler gibi dalgalandıran, seher vakitlerinde İlâhî serpintiler eserken ma'rifetler ve lütuflar yağdıran Allah'a hamdolsun.
 
 İnsanları kurtuluş yoluna irşâd etmek için gönderilen en mükemmel elçi, Allah'ın kullarını hidâyete ileten en fazîletli rehber, yaradılmışlar için rahmet, ihtiyaçların giderilmesi için iltica makamı Muhammed sallallâhü aleyhi ve selemle, âline, ashâbına; ihtilâfları izâle etme konusunda kaideler te'sîs etmek sûretiyle müslümanlara nasîhat âbideleri, idâre ve hidâyet önderleri olan âline, ashâbına ve nesline en kâmil ve en mükemmel salât ve selâm olsun.

@@ -16,6 +16,8 @@ Erzurum Atatürk Üniversitesi tarafından 2013 yılında düzenlenen “Uluslar
 
 ---
 
+![Efe Hazretleri Sempozyumu](/assets/images/posts/efehazretlerisempozyumcilt2-160x233.webp)
+
 **Şiir ve Bilgelik: Alvarlı Efe Muhammed Lutfî Örneği**
 **Mustafa Aydoğan**
 
