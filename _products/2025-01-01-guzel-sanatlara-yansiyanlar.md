@@ -11,7 +11,7 @@ book: "guzel-sanatlara-yansiyanlar/guzel-sanata-yansiyanlar.html"
 ean: 8697911200036
 
 youtube:
-
+ 
 
 # Buyout Ecommerce
 # dnr: "https://www.dr.com.tr/kitap/sacakli-kizin-pasakli-gunlugu-2/cocuk-ve-genclik/genclik-10-yas/roman-oyku/urunno=0001893059001"

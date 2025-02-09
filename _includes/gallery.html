@@ -1,0 +1,200 @@
+<!-- tiny slider -->
+<script src="{{site.baseurl}}/assets/js/tiny-slider.js"></script>
+
+<!-- Lightbox için basit bir CSS -->
+<style>
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 90vh;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+</style>
+
+<div class="container gallery-container">
+  <div class="gallery-slider" id="gallery-slider">
+    {% assign image_files = include.images | split: "," %}
+    {% for image in image_files %}
+      <div class="gallery-slide">
+        <figure>
+          <a href="{{ image | strip }}" class="lightbox">
+            <img src="{{ image | strip }}" alt="">
+          </a>
+        </figure>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="gallery-controls">
+    <button class="gallery-prev">
+      <i class="fa fa-chevron-left"></i>
+    </button>
+    <div class="gallery-count">
+      <span class="current">1</span> / <span class="total">{{ image_files.size }}</span>
+    </div>
+    <button class="gallery-next">
+      <i class="fa fa-chevron-right"></i>
+    </button>
+  </div>
+</div>
+
+<!-- Lightbox HTML -->
+<div class="lightbox-overlay">
+  <span class="lightbox-close">&times;</span>
+  <div class="lightbox-content">
+    <img src="" alt="">
+  </div>
+</div>
+
+<style>
+.gallery-container {
+  position: relative;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+.gallery-slider {
+  margin-bottom: 1rem;
+}
+
+.gallery-slide figure {
+  margin: 0;
+  height: 420px;
+}
+
+.gallery-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.gallery-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.gallery-prev,
+.gallery-next {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #666;
+}
+
+.gallery-count {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.lightbox {
+  cursor: zoom-in;
+}
+
+/* Hide tiny-slider buttons */
+[data-action="stop"],
+[data-action="start"] {
+  display: none;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Tiny Slider
+  const slider = tns({
+    container: '#gallery-slider',
+    items: 1,
+    slideBy: 1,
+    autoplay: false,
+    controls: true,
+    nav: false,
+    controlsContainer: '.gallery-controls',
+    prevButton: '.gallery-prev',
+    nextButton: '.gallery-next',
+    touch: true,
+    mouseDrag: true,
+    preventScrollOnTouch: 'auto'
+  });
+
+  // Sayaç güncelleme
+  const currentElement = document.querySelector('.current');
+  const totalElement = document.querySelector('.total');
+  
+  // İlk yüklemede sayacı ayarla
+  const info = slider.getInfo();
+  totalElement.textContent = info.slideCount;
+  currentElement.textContent = '1';
+  
+  // Her slayt değişiminde sayacı güncelle
+  slider.events.on('indexChanged', function() {
+    const info = slider.getInfo();
+    currentElement.textContent = info.displayIndex;
+  });
+
+  // Lightbox işlevselliği
+  const lightboxLinks = document.querySelectorAll('.lightbox');
+  const lightboxOverlay = document.querySelector('.lightbox-overlay');
+  const lightboxImg = lightboxOverlay.querySelector('img');
+  const lightboxClose = document.querySelector('.lightbox-close');
+
+  lightboxLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const imgSrc = link.getAttribute('href');
+      lightboxImg.src = imgSrc;
+      lightboxOverlay.style.display = 'block';
+      document.body.style.overflow = 'hidden'; // Sayfa kaydırmayı engelle
+    });
+  });
+
+  // Lightbox kapatma
+  lightboxClose.addEventListener('click', () => {
+    lightboxOverlay.style.display = 'none';
+    document.body.style.overflow = ''; // Sayfa kaydırmayı geri aç
+  });
+
+  lightboxOverlay.addEventListener('click', (e) => {
+    if (e.target === lightboxOverlay) {
+      lightboxOverlay.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  });
+
+  // ESC tuşu ile kapatma
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightboxOverlay.style.display === 'block') {
+      lightboxOverlay.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  });
+});
+</script>
