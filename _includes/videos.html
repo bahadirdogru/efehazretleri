@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/music.css">
+<!-- <link rel='stylesheet prefetch' href='https://cdn.plyr.io/2.0.13/plyr.css'> -->
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/plyr.css">
+<style>
+   .video-container ul{
+       list-style: none;
+   }
+</style>
+<div class="container video-container">
+    <div class="column add-bottom">
+        <div id="mainwrap">
+            <div id="div_main">
+                <div id="nowPlay">
+                    <span class="left" id="npAction">Duraklatıldı...</span>
+                    <span class="right" id="npTitle"></span>
+                </div>
+                <div id="videowrap">
+                    <div id="video0">
+                        <iframe id="video1" width="100%" height="360" frameborder="0" allowfullscreen>
+                            Tarayıcınız Video Dosyalarını Açamıyor!
+                        </iframe>
+                    </div>
+                    <div id="tracks" style="text-align: center;">
+                        <a id="btnPrev">&larr;</a>
+                        <a id="btnNext">&rarr;</a>
+                    </div>
+                </div>
+            </div>
+            <div id="plwrap" class="content">
+                <ul id="plList"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    console.log("bahadır");
+    var playlist = [
+    {% for video in page.youtube %}
+        {
+        "track": {{ forloop.index }},
+        "name": "Video {{ forloop.index }}",
+        "file": "{{ video }}"
+        }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+    ];
+</script>
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/plyr/2.0.18/plyr.js'></script> -->
+<script src="{{ site.baseurl }}/assets/js/plyr.js"></script>
+<script src="{{ site.baseurl }}/assets/js/videos.js"></script>
